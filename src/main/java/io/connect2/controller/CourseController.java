@@ -34,18 +34,18 @@ public class CourseController {
         return userMetaDataService.getAllUserMetaData();
     }
 
-    @DeleteMapping("/user/{id}")
+    @DeleteMapping("/userdelete/{id}")
     public Object deleteCourse(@PathVariable String id) {
         return userMetaDataService.deleteUserMeta(id);
     }
 
-    @GetMapping("user/{id}")
+    @GetMapping("usersearch/{id}")
     public Object searchCourse(@PathVariable String id) {
         return userMetaDataService.getUserMetaData(id);
 
     }
 
-    @PutMapping("user/{id}")
+    @PutMapping("userupdate/{id}")
     public void updateCourse(@RequestBody UserMetaDataDTO userMetaDataDTO, @PathVariable String id) {
             userMetaDataService.updateUserMetaData(userMetaDataDTO, id);
     }
